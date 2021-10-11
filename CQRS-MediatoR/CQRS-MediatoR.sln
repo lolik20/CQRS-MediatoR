@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31727.386
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS-MediatoR.API", "CQRS-MediatoR.API\CQRS-MediatoR.API.csproj", "{753D3350-A3DF-4946-95BF-6747F6EBBD1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS-MediatoR.BLL", "CQRS-MediatoR.BLL\CQRS-MediatoR.BLL.csproj", "{DD74FD39-5051-45DE-8140-018ED0BB92B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS-MediatoR.DAL", "CQRS-MediatoR.DAL\CQRS-MediatoR.DAL.csproj", "{A1EA8E3C-F487-496C-A9A7-5897BEDB05B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{753D3350-A3DF-4946-95BF-6747F6EBBD1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{753D3350-A3DF-4946-95BF-6747F6EBBD1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{753D3350-A3DF-4946-95BF-6747F6EBBD1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{753D3350-A3DF-4946-95BF-6747F6EBBD1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD74FD39-5051-45DE-8140-018ED0BB92B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD74FD39-5051-45DE-8140-018ED0BB92B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD74FD39-5051-45DE-8140-018ED0BB92B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD74FD39-5051-45DE-8140-018ED0BB92B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1EA8E3C-F487-496C-A9A7-5897BEDB05B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1EA8E3C-F487-496C-A9A7-5897BEDB05B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1EA8E3C-F487-496C-A9A7-5897BEDB05B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1EA8E3C-F487-496C-A9A7-5897BEDB05B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2EC1BDF5-B620-48A6-BDB2-D7F68111BB79}
+	EndGlobalSection
+EndGlobal
