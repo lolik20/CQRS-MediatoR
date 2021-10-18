@@ -4,7 +4,7 @@ My skills and knowledges 18.10.2021
 
 Так же умею работать /
 Also can work with:
-SignalR, PostgreSQL, IMemoryCache, Mapper, EF
+SignalR, PostgreSQL, IMemoryCache, Mapper, EF, ILogger
 
 
 Понимаю различие между /
