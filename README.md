@@ -28,3 +28,6 @@ I know what it's
 - ACID
 - CI/CD
 - Virtual, Abstract, Generic class
+
+
+Могу читать документацию на английском языке / Can read documentation in English
