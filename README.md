@@ -16,6 +16,7 @@ Understand difference between
 - boxing / unboxing
 - Managed / Unmanaged resource
 
+
 Знаю что такое /
 I know what it's
 - Reflection
@@ -24,3 +25,5 @@ I know what it's
 - SOLID
 - Rest
 - Consistency
+- CI/CD
+- Virtual, Abstract, Generic class
