@@ -25,5 +25,6 @@ I know what it's
 - SOLID
 - Rest
 - Consistency
+- ACID
 - CI/CD
 - Virtual, Abstract, Generic class
