@@ -5,22 +5,31 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore;
 
-namespace CQRS_MediatoR.API
+namespace CQRS_MediatoR.Api
 {
     public class Program
     {
-        public static void Main(string[] args)
+		public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            CreateWebHostBuilder(args).Build().Run();
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
+        private static IWebHostBuilder CreateWebHostBuilder(string[] args)
+        {
+            return WebHost.CreateDefaultBuilder(args)
+                .ConfigureAppConfiguration((ctx, builder) =>
                 {
-                    webBuilder.UseStartup<Startup>();
-                });
-    }
+                    builder.AddJsonFile("appsettings.json", false, true);
+                    builder.AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}.json", true, true);
+                    //builder.AddUserSecrets(Assembly.GetExecutingAssembly());
+                    builder.AddEnvironmentVariables();
+                })
+                .UseStartup<Startup>();
+        }
+
+	}
 }
