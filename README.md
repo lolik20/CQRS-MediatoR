@@ -16,8 +16,8 @@ Understand difference between
 - boxing / unboxing
 - Managed / Unmanaged resource
 
-Знаю что такое:
-I know what it's:
+Знаю что такое /
+I know what it's
 - Reflection
 - DI and IoC
 - Hash table
