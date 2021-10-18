@@ -6,7 +6,7 @@ using System.Text;
 
 namespace CQRS_MediatoR.Common.Entities.RequestModels
 {
-    public class StartTaskRequest : IRequest<StartTaskResponse>
+    public class GetTaskByIdRequest : IRequest<GetTaskByIdResponse>
     {
         public int TaskId { get; set; }
     }

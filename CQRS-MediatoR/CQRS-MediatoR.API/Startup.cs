@@ -25,7 +25,6 @@ using Mapper = CQRS_MediatoR.Api.Configuration.Mapper;
 using OpenApiSchema = Microsoft.OpenApi.Models.OpenApiSchema;
 using OpenApiSecurityScheme = Microsoft.OpenApi.Models.OpenApiSecurityScheme;
 using CQRS_MediatoR.BL.Configuration;
-using CQRS_MediatoR.BL.Hubs;
 
 namespace CQRS_MediatoR.Api
 {
@@ -53,6 +52,7 @@ namespace CQRS_MediatoR.Api
                     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore)
                 .RegisterFluentValidation();
 
+
             services.AddSwaggerDocument(c =>
             {
                 //c.AddSecurity("JWT", new OpenApiSecurityScheme
@@ -68,13 +68,13 @@ namespace CQRS_MediatoR.Api
                 c.PostProcess = doc =>
                 {
                     doc.Info.Version = "v1";
-                    doc.Info.Title = "Utg LC Api";
-                    doc.Info.Description = "The documentation Utg LC API";
+                    doc.Info.Title = "CQRS Api";
+                    doc.Info.Description = "The documentation CQRS API";
                 };
             });
             services.AddLogging();
 
-            services.AddAuthentication("BasicAuthentication").AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
+           
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
@@ -113,7 +113,7 @@ namespace CQRS_MediatoR.Api
             })
             .AddCookie(options =>
             {
-                options.Cookie.Name = "UTGJWTLC";
+                options.Cookie.Name = "CQRSJWTLC";
                 options.Cookie.IsEssential = true;
                 options.Cookie.HttpOnly = false;
 
@@ -181,11 +181,11 @@ namespace CQRS_MediatoR.Api
             builder.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                endpoints.MapHub<ChatHub>("api/chat");
+                //endpoints.MapHub<ChatHub>("api/chat");
             });
 
 
-            var swaggerPath = $"/clients/swagger";
+            var swaggerPath = $"/api/swagger";
 
             builder.UseOpenApi(options =>
             {

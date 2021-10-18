@@ -14,6 +14,11 @@ namespace CQRS_MediatoR.Api.Configuration
             config.CreateMap<AddTaskRequest, Task>()
                 .ForMember(x => x.Id, x => x.Ignore());
 
+            config.CreateMap<GetTasksResponse, Task>()
+                .ForMember(x => x.Id, x => x.Ignore());
+
+            config.CreateMap<GetTaskByIdResponse, Task>()
+                .ForMember(x => x.Id, x => x.Ignore());
         }
     }
 }

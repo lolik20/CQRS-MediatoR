@@ -17,16 +17,29 @@ namespace CQRS_MediatoR.API.Controllers
         {
             _mediator = mediator;
         }
+        [HttpPost("AddTask")]
         public IActionResult AddTask([FromBody] AddTaskRequest request)
         {
             var response = _mediator.Send(request);
             return Ok(response);
         }
-        public IActionResult StartTask([FromQuery]StartTaskRequest request)
+        [HttpPost("StartTask")]
+        public IActionResult StartTask([FromBody]StartTaskRequest request)
         {
             var response = _mediator.Send(request);
             return Ok(response);
-
+        }
+        [HttpGet("AllTasks")]
+        public IActionResult GetTasks ([FromQuery]GetTasksRequest request)
+        {
+            var response = _mediator.Send(request);
+            return Ok(response);
+        }
+        [HttpGet("GetTask")]
+        public IActionResult GetTaskById([FromQuery] GetTaskByIdRequest request)
+        {
+            var response = _mediator.Send(request);
+            return Ok(response);
         }
     }
 }

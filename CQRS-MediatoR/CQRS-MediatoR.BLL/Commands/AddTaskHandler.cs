@@ -26,21 +26,28 @@ namespace CQRS_MediatoR.BLL.Commands
         public async Task<AddTaskResponse> Handle(AddTaskRequest request, CancellationToken cancellationToken)
         {
             var task = _context.Tasks.Find(request);
+
             if (task != null)
             {
                 var model = _mapper.Map<Common.Entities.Domain.Task>(request);
+
                 _context.Tasks.Add(model);
                 _context.SaveChanges();
+
                 var addedResult = new AddTaskResponse()
                 {
                     IsSuccessful = true
                 };
+
                 return addedResult;
+
             }
+
             var result = new AddTaskResponse()
             {
                 IsSuccessful = false
             };
+
             return result;
         }
     }

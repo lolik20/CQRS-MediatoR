@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CQRS_MediatoR.Common.Entities.ResponseModels
 {
-   public class GetTasksResponse
+  public  class GetTaskByIdResponse
     {
         public string Title { get; set; }
         public DateTime DateTime { get; set; }

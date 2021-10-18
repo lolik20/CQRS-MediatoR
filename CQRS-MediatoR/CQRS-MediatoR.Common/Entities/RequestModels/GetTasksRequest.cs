@@ -6,7 +6,7 @@ using System.Text;
 
 namespace CQRS_MediatoR.Common.Entities.RequestModels
 {
-    public class GetTasksRequest : IRequest<GetTasksResponse>
+    public class GetTasksRequest : IRequest<IReadOnlyCollection< GetTasksResponse>>
     {
         public int Skip { get; set; } = 0;
         public int Take { get; set; } = 5;

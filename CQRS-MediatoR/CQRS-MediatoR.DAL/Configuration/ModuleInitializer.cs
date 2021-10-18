@@ -22,7 +22,7 @@ namespace CQRS_MediatoR.DAL.Configuration
         {
             services.AddDbContext<CQRSContext>(options =>
             {
-                options.UseNpgsql(configuration.GetConnectionString("UTGDatabase"));
+                options.UseNpgsql(configuration.GetConnectionString("Database"));
             });
         }
 

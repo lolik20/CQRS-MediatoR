@@ -20,23 +20,32 @@ namespace CQRS_MediatoR.BLL.Commands
         }
         public async Task<StartTaskResponse> Handle(StartTaskRequest request, CancellationToken cancellationToken)
         {
-            var task = _context.Tasks.FirstOrDefault(x => x.Id.Equals(request.TaskId));
+            var task = _context.Tasks
+                .FirstOrDefault(x => x.Id
+                .Equals(request.TaskId));
+
             if (
                 task.Status != Common.Entities.Domain.Enums.Status.Expired ||
                 task.Status != Common.Entities.Domain.Enums.Status.InProgress)
             {
+
                 task.Status = Common.Entities.Domain.Enums.Status.Done;
                 _context.SaveChanges();
+
                 var okResult = new StartTaskResponse()
                 {
                     IsSuccessful = true
                 };
+
                 return okResult;
+
             }
+
             var result = new StartTaskResponse()
             {
                 IsSuccessful = false
             };
+
             return result;
         }
     }
