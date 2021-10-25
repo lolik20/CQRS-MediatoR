@@ -16,6 +16,7 @@ Understand difference between
 - boxing / unboxing
 - Managed / Unmanaged resource
 and more...
+
 Знаю что такое /
 I know what it's
 - Reflection
