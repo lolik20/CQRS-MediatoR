@@ -24,7 +24,6 @@ I know what it's
 - Hash table
 - SOLID
 - Rest
-- Consistency
 - ACID
 - CI/CD
 - Virtual, Abstract, Generic class
